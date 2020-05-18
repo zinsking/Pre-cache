@@ -90,7 +90,7 @@ class preCache():
                                    verify=self.verify).text
         urls = []
         for u in xmltodict.parse(sitemap)["urlset"]["url"]:
-            url = u["loc"]
+            url = u["li"]
             scheme = urlparse(url).scheme
             domain = urlparse(url).netloc
             if self.host:
